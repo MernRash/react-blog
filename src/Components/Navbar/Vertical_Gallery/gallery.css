@@ -1,0 +1,30 @@
+.Gallery-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 16px;
+    margin: 5rem;
+}
+
+
+.img-1{
+    background-color: red;
+    height: 50vh;
+     grid-row-start: 1;
+    grid-row-end: 4;
+
+
+}
+
+.img-2{
+    background-color: coral;
+    height: 21vh;
+   grid-column-start: 2;
+
+}
+
+.img-3{
+    background-color: aqua;
+    height: 26vh;
+    grid-column-start: 2;
+
+}

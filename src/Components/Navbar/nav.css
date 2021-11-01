@@ -1,0 +1,28 @@
+nav{
+    border-bottom: 2px solid lightgray;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.Logo{
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.Logo span{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.logo-head{
+    transform: rotate(270deg);
+}
+
+.lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
