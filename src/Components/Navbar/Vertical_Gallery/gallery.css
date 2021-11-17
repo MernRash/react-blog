@@ -11,7 +11,7 @@
     height: 50vh;
      grid-row-start: 1;
     grid-row-end: 4;
-
+    background-image: url(../../images/latest-article.jpg);
 
 }
 
@@ -19,6 +19,7 @@
     background-color: coral;
     height: 21vh;
    grid-column-start: 2;
+   background-image: url(../../images/latest-article.jpg);
 
 }
 
@@ -26,5 +27,6 @@
     background-color: aqua;
     height: 26vh;
     grid-column-start: 2;
+    background-image: url(../../images/latest-article.jpg);
 
 }
