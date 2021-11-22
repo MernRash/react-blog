@@ -3,21 +3,54 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 16px;
     margin: 5rem;
+    position: relative;
 }
 
+/* .img-1,.img-2,.img-3 h2{
+    color: #000;
+    position: absolute;
+    bottom: 40px;
+    left:10px
+} */
 
+.catg{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+.catg1{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+}
+.catg2{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+}
 .img-1{
     height: 50vh;
      grid-row-start: 1;
     grid-row-end: 4;
-    background-image: url(../../images/latest-article.jpg);
-filter: brightness(0.3);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.479), rgba(255, 255, 255, 0.548)), url(../../images/latest-article.jpg);
+ 
+
 }
 
 .img-2{
     height: 22vh;
    grid-column-start: 2;
-   background-image: url(../../images/latest-article.jpg);
+   background-image: linear-gradient(rgba(255, 255, 255, 0.479), rgba(255, 255, 255, 0.548)),url(../../images/latest-article.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+  
 
 }
 
@@ -25,7 +58,7 @@ filter: brightness(0.3);
     background-color: aqua;
     height: 26vh;
     grid-column-start: 2;
-    background-image: url(../../images/latest-article.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.479), rgba(255, 255, 255, 0.548)),url(../../images/latest-article.jpg);
 
 }
 

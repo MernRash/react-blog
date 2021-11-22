@@ -7,13 +7,16 @@ function Gallery(){
         <>
         <div className="Gallery-1">
         <div className="img-1">
-           <span>Title of Vertical Gallery</span>
+           <h2>Title of Vertical Gallery</h2>
+           <p className="catg">Travel / August 21 2017</p>
         </div>
         <div className="img-2">
-        <span>The sound cloud You loved is Dommed</span>
+        <h2>The sound cloud You loved is Dommed</h2>
+        <p className="catg1">Travel / August 21 2017</p>
         </div>
         <div className="img-3">
-        <span>The sound cloud You loved is Dommed</span>
+        <h2>The sound cloud You loved is Dommed</h2>
+        <p className="catg2">Travel / August 21 2017</p>
         </div>
         </div>
         </>
