@@ -7,17 +7,15 @@
 
 
 .img-1{
-    background-color: red;
     height: 50vh;
      grid-row-start: 1;
     grid-row-end: 4;
     background-image: url(../../images/latest-article.jpg);
-
+filter: brightness(0.3);
 }
 
 .img-2{
-    background-color: coral;
-    height: 21vh;
+    height: 22vh;
    grid-column-start: 2;
    background-image: url(../../images/latest-article.jpg);
 
@@ -30,3 +28,11 @@
     background-image: url(../../images/latest-article.jpg);
 
 }
+
+.img-1 span{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #fff;
+ filter: none;
+} 

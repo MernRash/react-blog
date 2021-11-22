@@ -1,0 +1,42 @@
+.stories-main-container{
+    display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 90%;
+   margin-left: 5%;
+   border-top: 2px solid lightgray;
+   border-bottom: 2px solid lightgray;
+   padding: 15px 15px;
+}
+.stories-container{
+    flex-basis: 30%;
+    border-right: 2px solid lightgray;
+    
+}
+
+.stories-container h2{
+    font-size: 2rem;
+}
+
+.more{
+    margin-left: 5%;
+    margin-top: 5px;
+}
+
+@media screen and (min-width:300px) and (max-width:640px) {
+    
+    .top-post-conatiner{
+        height: fit-content;
+    }
+
+    .stories-main-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2px;
+    }
+
+    .stories-container{
+        border-right: none;
+        border-bottom: 2px solid lightgray;
+    }
+}

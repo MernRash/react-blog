@@ -1,0 +1,49 @@
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+.post-list-container{
+    display: flex;
+    margin-bottom: 25px;
+    gap:15px;
+    border-bottom: 2px solid lightgray;
+}
+
+.post-image-container img{
+    width: 100%;
+}
+
+.post-data-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.post-image-container1{
+    width: 30%;
+}
+
+#post_title{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#post_num{
+    font-weight: bold;
+    font-size: 4rem;
+    color: lightgray;
+}
+
+.try_head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+}
+

@@ -1,0 +1,27 @@
+.common-main-container {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .div-articles {
+    flex-basis: 68%;
+  }
+  
+  .div-advt {
+    flex-basis: 30%;
+  }
+  
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    .common-main-container {
+      width: 90%;
+      flex-direction: column;
+    }
+  
+    .div-container .div-articles,
+    .div-container .div-advt {
+      flex-basis: unset;
+    }
+  }
+  

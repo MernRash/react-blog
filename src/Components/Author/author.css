@@ -1,0 +1,15 @@
+.author-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .author-container img {
+    width: 100px;
+    margin-bottom: 18px;
+  }
+  
+  .author-container div {
+    margin-left: 20px;
+  }
+  

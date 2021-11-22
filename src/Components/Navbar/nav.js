@@ -1,26 +1,41 @@
-import React,{Component} from 'react';
+import React,{useState} from 'react';
 import './nav.css';
+import { HiMenu, HiOutlineX } from "react-icons/hi";
+import {NavLink} from "react-router-dom";
 
-class NavBar extends Component{
-    render(){
+function NavBar(){
+    const [showNavLinks, setShowNavLinks]=useState(false);
+        
+        const navLinks = [
+            {to:"/", catagory:"Home"},
+            {to:"/bollywood", catagory:"Bollywood"},
+            {to:"/technology", catagory:"Technology"},
+            {to:"/hollywoood", catagory:"Hollywoood"},
+            {to:"/fitness", catagory:"Fitness"},
+            {to:"/food", catagory:"Food"},
+            {to:"/get-started", catagory:"GetStarted"},
+
+        ]
         return(
             <>
             <nav>
                 <div className="Logo">
-                    <h3 className="logo-head">The</h3>
+                    <h4 className="logo-head">The</h4>
                     <span>Siren</span>
                 </div>
 
                 <div className="head-list">
-                    <ul className="lists">
-                        <li>Home</li>
-                        <li>Bollywood</li>
-                        <li>Technology</li>
-                        <li>Hollywoood</li>
-                        <li>Fitness</li>
-                        <li>Food</li>
+                    <ul className={showNavLinks?"nav-links-mobile":"nav-links"}>
+                      {
+                          navLinks.map((item)=>{
+                              return(
+                            <li><NavLink to={item.to} activeClassName="active" exact>{item.catagory} </NavLink> </li>
+                          )})
+                      }
                     </ul>
-
+                    <div className="hamburg-menu" onClick={()=>setShowNavLinks(!showNavLinks)}>
+                   {showNavLinks?<HiOutlineX />:<HiMenu/>}
+                </div>
                 </div>
 
                 
@@ -28,7 +43,7 @@ class NavBar extends Component{
             </>
         )
     }
-}
+
 
 
 export default NavBar;
