@@ -12,7 +12,7 @@ function Main(){
         <div className="Main Conatiner">
             <NavBar />
             <Routes>
-                <Route path="/" element={<Home/>} />
+                <Route path="/" element={<Home/>} exact/>
                 <Route path="/:catagory" element={<Catagory />} exact/>
                 <Route path="/:catagory/:id" element={<Blog />} exact/>
                 <Route path="/get-started" element={<Login />} exact />

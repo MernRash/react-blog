@@ -8,12 +8,12 @@ function NavBar(){
     const [showNavLinks, setShowNavLinks]=useState(false);
         
         const navLinks = [
-            {to:"/", catagory:"Home"},
-            {to:"/bollywood", catagory:"Bollywood"},
-            {to:"/technology", catagory:"Technology"},
-            {to:"/hollywoood", catagory:"Hollywoood"},
-            {to:"/fitness", catagory:"Fitness"},
-            {to:"/food", catagory:"Food"},
+            {to:"/", catagory:"Home",id:1},
+            {to:"/bollywood", catagory:"Bollywood",id:2},
+            {to:"/technology", catagory:"Technology",id:3},
+            {to:"/hollywood", catagory:"Hollywoood",id:4},
+            {to:"/fitness", catagory:"Fitness",id:5},
+            {to:"/food", catagory:"Food",id:6},
            
 
         ]
@@ -28,9 +28,9 @@ function NavBar(){
                 <div className="head-list">
                     <ul className={showNavLinks?"nav-links-mobile":"nav-links"}>
                       {
-                          navLinks.map((item)=>{
+                          navLinks.map((value,index)=>{
                               return(
-                            <li><NavLink to={item.to} activeClassName="active" exact>{item.catagory} </NavLink> </li>
+                            <li><NavLink to={value.to} key={index} activeClassName="active" exact>{value.catagory} </NavLink> </li>
                           )})
                       }
                       <NavLink to="/get-started"><button className="btn">Get Started</button></NavLink>
