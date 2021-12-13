@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import "./postList.css";
 import { BsArrowDown } from 'react-icons/bs';
 import { PostDataContext } from "../ContextData/PostsDataContext";
-import Latest_Img from "../images/latest-article.jpg";
+// import Latest_Img from "../images/latest-article.jpg";
 import SectionTitle from "../utility/sectionTitle";
 import { useParams, Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ function PostList(props) {
         return (
           <div className="post-list-container" key={index}>
             <div className="post-image-container">
-              <img src={Latest_Img} alt="try-post-img" />
+              <img src={values.imgURL} alt="try-post-img" />
             </div>
 
             <div className="post-data-container">
@@ -38,7 +38,7 @@ function PostList(props) {
                 {" "}
                 <h4>{values.title}</h4>{" "}
               </Link>
-              <p>{values.desc}</p>
+              <p>{values.desc.substring(0,150)}</p>
             </div>
           </div>
         );

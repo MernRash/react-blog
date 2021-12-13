@@ -1,18 +1,17 @@
 import React from "react";
-import Gallery from "../Navbar/Vertical_Gallery/gallery";
+// import Gallery from "../Navbar/Vertical_Gallery/gallery";
 import LatestCard from "../Latest Component/latestcards";
 import SectionTitle from "../utility/sectionTitle";
 import ArticleCard from "../Latest Articles/latestArticle";
 import LatestStories from "../Latest Stories/latestStories";
+import Intro from "../Navbar/Intro/Intro";
 
 
 function Home(){
     return(
         <div>
-        <div className="Gallery-Container">
-        <Gallery />
-
-        </div>
+          <Intro />
+      
         
         <div className="latest-card-container">
         <SectionTitle text="The Latest" />

@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import "./latestCard.css";
 import { Link,useParams } from "react-router-dom";
 import { PostDataContext } from "../ContextData/PostsDataContext";
-import Latest_Img from "../images/latest-article.jpg";
+// import Latest_Img from "../images/latest-article.jpg";
 
 // const latestCardData = [
 //   {
@@ -49,7 +49,7 @@ function LatestCard() {
           <>
           <div className="latest-card-main-container" key={index}>
             <div className="latest-card-image-container">
-              <img src={Latest_Img} alt="latest_article"></img>
+              <img src={item.imgURL} alt="latest_article"></img>
             </div>
 
             <div className="latest-card-info-container">
@@ -57,7 +57,7 @@ function LatestCard() {
               <Link to={`/article/${item.id}`}> {item.title} </Link>
               </span>
               <p>
-               {item.desc}
+               {item.desc.substring(0, 150)}
               </p>
 
               <div className="catagory-info-container">

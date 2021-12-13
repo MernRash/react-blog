@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import './blog.css';
 import { PostDataContext } from "../ContextData/PostsDataContext";
 import Banner from "../images/post-hero-img.png";
-import VS_Code from "../images/code-ss-post.png";
+// import VS_Code from "../images/code-ss-post.png";
 import Clap from "../images/clap.png";
 import Share from "../images/share.png";
 import Author from "../Author/author";
@@ -45,7 +45,7 @@ export default function Blog(){
                 <hr/>
                 <img src={Banner} alt="react-banner" />
                 <p>{values.desc}</p>
-                <img src={VS_Code} alt="blog-img" />
+                <img src={values.imgURL} alt="blog-img" />
                 </>))}
                 <div className="blog-keyword-container">
                     <span>React</span>
