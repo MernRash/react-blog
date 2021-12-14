@@ -12,7 +12,7 @@ function More(props){
             <div className="card-container">
             <div>
                 <span>Also tagged ReactJS</span>
-                <img src={props.imgUrl} alt="blog_img"></img>
+                <img src={props.imgURL} alt="blog_img"></img>
                 <h2>{props.title}</h2>
                 <Author name = {props.author} />
             </div>
