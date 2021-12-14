@@ -34,7 +34,7 @@ export default function Blog(){
                 <h2>{values.title}</h2>
                 <hr/>
                 <div className="author-info">
-                    <Author name="Dmitry Nozhenko"/>
+                    <Author name={values.author}/>
                     <div className="author-social-profiles">
                         <FaFacebookSquare/>
                         <FaTwitterSquare/>
