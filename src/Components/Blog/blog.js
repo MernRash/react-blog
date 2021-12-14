@@ -59,12 +59,14 @@ export default function Blog(){
                     <Author name={values.author} />
                     </div> 
                 </div>
+                
                 </>))}
                
             
         </div>
 
-        <More />
+{filterPostdata.slice(1,4).map((item)=>return(<More author={item.author} title={item.title} imgURL = {item.imgURL} />));
+//         <More />
         </>
     )
 }
