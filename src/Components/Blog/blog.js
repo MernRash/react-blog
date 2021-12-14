@@ -46,8 +46,8 @@ export default function Blog(){
                 <img src={Banner} alt="react-banner" />
                 <p>{values.desc}</p>
                 <img src={values.imgURL} alt="blog-img" />
-                </>))}
-                <div className="blog-keyword-container">
+                    
+                     <div className="blog-keyword-container">
                     <span>React</span>
                     <span>JavaScript</span>
                     <span>Animation</span>
@@ -56,9 +56,11 @@ export default function Blog(){
                     <span>9.3K claps</span></div>
 
                     <div className="WritenBy-details">
-                    <Author name="Dmitry Nzhenko" />
+                    <Author name={values.author} />
                     </div> 
                 </div>
+                </>))}
+               
             
         </div>
 
