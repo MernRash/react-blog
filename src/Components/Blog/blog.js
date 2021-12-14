@@ -61,9 +61,11 @@ export default function Blog(){
                 <img src={values.imgURL} alt="blog-img" />
                     
                      <div className="blog-keyword-container">
-                    <span>React</span>
-                    <span>JavaScript</span>
-                    <span>Animation</span>
+                    {values.tags.map((item)=>{
+                        return (
+                            <span>{item}</span>
+                        )
+                    })}
                     <br/>
                     <div><img src={Clap} alt="clap-img" />
                     <span>9.3K claps</span></div>

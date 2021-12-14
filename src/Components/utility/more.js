@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Latest_Img from "../images/latest-article.jpg";
+
 import Author from "../Author/author";
 import "./style.css";
 import { PostDataContext } from "../ContextData/PostsDataContext";
