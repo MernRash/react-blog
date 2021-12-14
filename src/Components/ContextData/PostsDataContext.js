@@ -135,7 +135,7 @@ import { createContext } from "react"
 const PostData = [
   {
       id: 0,
-      author: "Zuber Dunge",
+      author: "Rahul Shrestha",
       title: "Rajkummar Rao And Patralekhaa Are Married.",
       imgURL: "https://c.ndtvimg.com/2021-11/bt2fh6i8_rajkummar-rao_625x300_15_November_21.jpg",
       desc: "Congratulations, Rajkummar Rao and Patralekhaa. The couple got married in Chandigarh, in the presence of a few family members and friends. Rajkummar Rao and Patralekhaa have been dating for over a decade. Sharing the pictures from the wedding, Rajkummar Rao wrote: Finally after 11 years of love, romance, friendship and fun, I got married to my everything today, my soulmate, my best friend, my family.Today there is no greater happiness for me than being called your husband Patralekhaa.Here's to forever .. and beyond. Patralekhaa wrote in her post: I got married to my everything today; my boyfriend, my partner in crime, my family, my soulmate...My best friend for the last 11 years! There is no greater feeling than to be your wife! Here's to our forever..",
@@ -174,7 +174,7 @@ const PostData = [
   },
   {
       id: 3,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202111/crypto_0_1200x768.jpeg?ARzhHNDhzEZFvnu5WhxQzN1ByhyorYwm&size=770:433",
       title: "Crypto can't be stopped, there's need for regulation",
       desc: "With an understanding that crypto cannot be stopped in the country, the Members of Parliament (MPs) on Monday during a Parliamentary panel meet said that there is a need for regulation. While flagging off full-page crypto advertisements in national dailies, MPs said that the security of investors money is the most serious concern for all members.This is almost like the Ponzi scheme which got strong legal regulations later, MPs said, adding that El Salvador is the only country to legalise crypto so far.",
@@ -210,7 +210,7 @@ const PostData = [
   },
   {
       id: 6,
-      author: "Zuber Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://static.toiimg.com/photo/msid-85122780/85122780.jpg?305039",
       title: "Taylor Swift Winning Hearts : Red (Taylor’s Version) Released",
       desc: "If you haven’t listened to Red, recently or ever, it’s well worth your date; in its ecstatic, expressive vocals, tart humor, vivid imagery, and tender attention to the nuances of love and loss, you’ll find everything that makes Taylor Swift great. But the real draw for her main audience, who already know Red like the back of their hands, is the new material. Some of it is new only in the sense of being newly attached to this album or newly reclaimed by Taylor: “Ronan” was a one-off charity single in 2012; Little Big Town recorded “Better Man,” a stolen rearview glance on the drive away from toxic love, in 2016; and the venom-laced air kiss “Babe” was released by the country duo Sugarland in 2018. Most anticipated is an extended cut of a classic: “All Too Well,” a Red track with an outsize presence in Swift lore.",
@@ -246,7 +246,7 @@ const PostData = [
   },
   {
       id: 8,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.news18.com/ibnlive/uploads/2021/11/untitled-design-15-16371468153x2.png?impolicy=website&width=510&height=356",
       title: "How Healthy is the food You're Eating? Scientists Can Finally Rank It",
       desc: "People in today’s day and age have become very prudent about what they consume. However, with the influx of multiple brands, new foods, and establishments offering various types of edibles, it is crucial to have a system that rates the vivid variety of foods. Researchers at the Friedman School of Nutrition Science and Policy at Tufts University, Boston, Massachusetts, have devised a nutrient profiling system that tallies and weighs the nutritional characteristics, and rates different kinds of foods depending on their effect on the overall health of the body. Monikered as ‘food Compass,’ this tool has been developed after the research and development done across a period of three years and includes data collected on 8,032 foods and beverages consumed by the American populace, reported Tufts Now - the news website of Tufts University.        “Once you get beyond the general health advice related to food, the public is still oblivious to the method of ranking their meals and the choice of establishments offering food. Therefore, not just consumers, but policymakers and people associated with the food industry aim for guiding people towards healthier food habits,” Dariush Mozaffarian, Dean, Friedman School, was quoted as saying.                The food Compass developed by the researchers’ analyses various foods and beverages around 54 different characteristics across nine domains. Abiding by the findings of the tool, people can expect a reinforced insight into the science of food, which will, in turn, make it easier for them to decide what to eat to lead a healthy lifestyle.                According to the food Compass, anything with a score below 30 should be consumed to the minimum, followed by things falling in the range of 31-69, which should be consumed in moderation.   For example, snack and sweet deserts have acquired an average score of 16.4, which means that these edibles should be consumed with a pinch of salt (not literally). Vegetables and fruits have earned a score ranging between 73.9-100, which suggests that these should occupy a major part of your diet. Poultry scored 42.67, beef scored 24.9, while seafood scored 67 on the food Compass.",
@@ -258,7 +258,7 @@ const PostData = [
   },
   {
       id: 10,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.indianexpress.com/2021/11/Sonos_Roam_Speaker.jpeg",
       title: "Google says it owns the technology at heart of Sonos suit",
       desc: "Alphabet Inc.’s Google said it’s the rightful owner of patents on ways to keep music playlists in the cloud that form a key component of a lawsuit Sonos Inc. filed over the Google Play Music system. Sonos called that contention “nonsense.”        Sonos, an early proponent of connected home speakers, has claimed that Google gained knowledge of the technology through a partnership to integrate Google Play into the Sonos platform, and then decided to sell its own product line and undercut Sonos on price.              In a court filing Tuesday, the Alphabet unit said “Google, not Sonos, conceived of the cloud queue idea” and thus should be listed as owner and inventor of two of the Sonos patents. It also contends a 2013 Content Integration Agreement prohibits Sonos from claiming ownership of any technology developed during the partnership.",
@@ -270,7 +270,7 @@ const PostData = [
   },
   {
       id: 11,
-      author: "Zuber Dunge",
+      author: "Rahul Shrestha",
       title: "Dummy Blog 3",
       imgURL: "https://c.ndtvimg.com/2021-11/bt2fh6i8_rajkummar-rao_625x300_15_November_21.jpg",
       desc: "Congratulations, Rajkummar Rao and Patralekhaa. The couple got married in Chandigarh, in the presence of a few family members and friends. Rajkummar Rao and Patralekhaa have been dating for over a decade. Sharing the pictures from the wedding, Rajkummar Rao wrote: Finally after 11 years of love, romance, friendship and fun, I got married to my everything today, my soulmate, my best friend, my family.Today there is no greater happiness for me than being called your husband Patralekhaa.Here's to forever .. and beyond. Patralekhaa wrote in her post: I got married to my everything today; my boyfriend, my partner in crime, my family, my soulmate...My best friend for the last 11 years! There is no greater feeling than to be your wife! Here's to our forever..",
@@ -282,7 +282,7 @@ const PostData = [
   },
   {
       id: 12,
-      author: "Zuber Dunge",
+      author: "Rahul Shrestha",
       title: "Dummy Blog 4",
       imgURL: "https://c.ndtvimg.com/2021-11/bt2fh6i8_rajkummar-rao_625x300_15_November_21.jpg",
       desc: "Congratulations, Rajkummar Rao and Patralekhaa. The couple got married in Chandigarh, in the presence of a few family members and friends. Rajkummar Rao and Patralekhaa have been dating for over a decade. Sharing the pictures from the wedding, Rajkummar Rao wrote: Finally after 11 years of love, romance, friendship and fun, I got married to my everything today, my soulmate, my best friend, my family.Today there is no greater happiness for me than being called your husband Patralekhaa.Here's to forever .. and beyond. Patralekhaa wrote in her post: I got married to my everything today; my boyfriend, my partner in crime, my family, my soulmate...My best friend for the last 11 years! There is no greater feeling than to be your wife! Here's to our forever..",
@@ -294,7 +294,7 @@ const PostData = [
   },
   {
       id: 13,
-      author: "Zuber Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://static.toiimg.com/photo/msid-85122780/85122780.jpg?305039",
       title: "Dummy Blog 3",
       desc: "If you haven’t listened to Red, recently or ever, it’s well worth your date; in its ecstatic, expressive vocals, tart humor, vivid imagery, and tender attention to the nuances of love and loss, you’ll find everything that makes Taylor Swift great. But the real draw for her main audience, who already know Red like the back of their hands, is the new material. Some of it is new only in the sense of being newly attached to this album or newly reclaimed by Taylor: “Ronan” was a one-off charity single in 2012; Little Big Town recorded “Better Man,” a stolen rearview glance on the drive away from toxic love, in 2016; and the venom-laced air kiss “Babe” was released by the country duo Sugarland in 2018. Most anticipated is an extended cut of a classic: “All Too Well,” a Red track with an outsize presence in Swift lore.",
@@ -319,7 +319,7 @@ const PostData = [
   },
   {
       id: 15,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.news18.com/ibnlive/uploads/2021/11/untitled-design-15-16371468153x2.png?impolicy=website&width=510&height=356",
       title: "Dummy Blog 3",
       desc: "People in today’s day and age have become very prudent about what they consume. However, with the influx of multiple brands, new foods, and establishments offering various types of edibles, it is crucial to have a system that rates the vivid variety of foods. Researchers at the Friedman School of Nutrition Science and Policy at Tufts University, Boston, Massachusetts, have devised a nutrient profiling system that tallies and weighs the nutritional characteristics, and rates different kinds of foods depending on their effect on the overall health of the body. Monikered as ‘food Compass,’ this tool has been developed after the research and development done across a period of three years and includes data collected on 8,032 foods and beverages consumed by the American populace, reported Tufts Now - the news website of Tufts University.        “Once you get beyond the general health advice related to food, the public is still oblivious to the method of ranking their meals and the choice of establishments offering food. Therefore, not just consumers, but policymakers and people associated with the food industry aim for guiding people towards healthier food habits,” Dariush Mozaffarian, Dean, Friedman School, was quoted as saying.                The food Compass developed by the researchers’ analyses various foods and beverages around 54 different characteristics across nine domains. Abiding by the findings of the tool, people can expect a reinforced insight into the science of food, which will, in turn, make it easier for them to decide what to eat to lead a healthy lifestyle.                According to the food Compass, anything with a score below 30 should be consumed to the minimum, followed by things falling in the range of 31-69, which should be consumed in moderation.   For example, snack and sweet deserts have acquired an average score of 16.4, which means that these edibles should be consumed with a pinch of salt (not literally). Vegetables and fruits have earned a score ranging between 73.9-100, which suggests that these should occupy a major part of your diet. Poultry scored 42.67, beef scored 24.9, while seafood scored 67 on the food Compass.",
@@ -331,7 +331,7 @@ const PostData = [
   },
   {
       id: 16,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.news18.com/ibnlive/uploads/2021/11/untitled-design-15-16371468153x2.png?impolicy=website&width=510&height=356",
       title: "Dummy Blog 4",
       desc: "People in today’s day and age have become very prudent about what they consume. However, with the influx of multiple brands, new foods, and establishments offering various types of edibles, it is crucial to have a system that rates the vivid variety of foods. Researchers at the Friedman School of Nutrition Science and Policy at Tufts University, Boston, Massachusetts, have devised a nutrient profiling system that tallies and weighs the nutritional characteristics, and rates different kinds of foods depending on their effect on the overall health of the body. Monikered as ‘food Compass,’ this tool has been developed after the research and development done across a period of three years and includes data collected on 8,032 foods and beverages consumed by the American populace, reported Tufts Now - the news website of Tufts University.        “Once you get beyond the general health advice related to food, the public is still oblivious to the method of ranking their meals and the choice of establishments offering food. Therefore, not just consumers, but policymakers and people associated with the food industry aim for guiding people towards healthier food habits,” Dariush Mozaffarian, Dean, Friedman School, was quoted as saying.                The food Compass developed by the researchers’ analyses various foods and beverages around 54 different characteristics across nine domains. Abiding by the findings of the tool, people can expect a reinforced insight into the science of food, which will, in turn, make it easier for them to decide what to eat to lead a healthy lifestyle.                According to the food Compass, anything with a score below 30 should be consumed to the minimum, followed by things falling in the range of 31-69, which should be consumed in moderation.   For example, snack and sweet deserts have acquired an average score of 16.4, which means that these edibles should be consumed with a pinch of salt (not literally). Vegetables and fruits have earned a score ranging between 73.9-100, which suggests that these should occupy a major part of your diet. Poultry scored 42.67, beef scored 24.9, while seafood scored 67 on the food Compass.",
@@ -344,7 +344,7 @@ const PostData = [
 
   {
       id: 16,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.news18.com/ibnlive/uploads/2021/11/untitled-design-15-16371468153x2.png?impolicy=website&width=510&height=356",
       title: "Dummy Blog 5",
       desc: "People in today’s day and age have become very prudent about what they consume. However, with the influx of multiple brands, new foods, and establishments offering various types of edibles, it is crucial to have a system that rates the vivid variety of foods. Researchers at the Friedman School of Nutrition Science and Policy at Tufts University, Boston, Massachusetts, have devised a nutrient profiling system that tallies and weighs the nutritional characteristics, and rates different kinds of foods depending on their effect on the overall health of the body. Monikered as ‘food Compass,’ this tool has been developed after the research and development done across a period of three years and includes data collected on 8,032 foods and beverages consumed by the American populace, reported Tufts Now - the news website of Tufts University.        “Once you get beyond the general health advice related to food, the public is still oblivious to the method of ranking their meals and the choice of establishments offering food. Therefore, not just consumers, but policymakers and people associated with the food industry aim for guiding people towards healthier food habits,” Dariush Mozaffarian, Dean, Friedman School, was quoted as saying.                The food Compass developed by the researchers’ analyses various foods and beverages around 54 different characteristics across nine domains. Abiding by the findings of the tool, people can expect a reinforced insight into the science of food, which will, in turn, make it easier for them to decide what to eat to lead a healthy lifestyle.                According to the food Compass, anything with a score below 30 should be consumed to the minimum, followed by things falling in the range of 31-69, which should be consumed in moderation.   For example, snack and sweet deserts have acquired an average score of 16.4, which means that these edibles should be consumed with a pinch of salt (not literally). Vegetables and fruits have earned a score ranging between 73.9-100, which suggests that these should occupy a major part of your diet. Poultry scored 42.67, beef scored 24.9, while seafood scored 67 on the food Compass.",
@@ -356,7 +356,7 @@ const PostData = [
   },
   {
       id: 17,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.news18.com/ibnlive/uploads/2021/11/untitled-design-15-16371468153x2.png?impolicy=website&width=510&height=356",
       title: "Dummy Blog 6",
       desc: "People in today’s day and age have become very prudent about what they consume. However, with the influx of multiple brands, new foods, and establishments offering various types of edibles, it is crucial to have a system that rates the vivid variety of foods. Researchers at the Friedman School of Nutrition Science and Policy at Tufts University, Boston, Massachusetts, have devised a nutrient profiling system that tallies and weighs the nutritional characteristics, and rates different kinds of foods depending on their effect on the overall health of the body. Monikered as ‘food Compass,’ this tool has been developed after the research and development done across a period of three years and includes data collected on 8,032 foods and beverages consumed by the American populace, reported Tufts Now - the news website of Tufts University.        “Once you get beyond the general health advice related to food, the public is still oblivious to the method of ranking their meals and the choice of establishments offering food. Therefore, not just consumers, but policymakers and people associated with the food industry aim for guiding people towards healthier food habits,” Dariush Mozaffarian, Dean, Friedman School, was quoted as saying.                The food Compass developed by the researchers’ analyses various foods and beverages around 54 different characteristics across nine domains. Abiding by the findings of the tool, people can expect a reinforced insight into the science of food, which will, in turn, make it easier for them to decide what to eat to lead a healthy lifestyle.                According to the food Compass, anything with a score below 30 should be consumed to the minimum, followed by things falling in the range of 31-69, which should be consumed in moderation.   For example, snack and sweet deserts have acquired an average score of 16.4, which means that these edibles should be consumed with a pinch of salt (not literally). Vegetables and fruits have earned a score ranging between 73.9-100, which suggests that these should occupy a major part of your diet. Poultry scored 42.67, beef scored 24.9, while seafood scored 67 on the food Compass.",
@@ -417,7 +417,7 @@ const PostData = [
   },
   {
       id: 22,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.indianexpress.com/2021/11/Sonos_Roam_Speaker.jpeg",
       title: "Dummy blog 6",
       desc: "Alphabet Inc.’s Google said it’s the rightful owner of patents on ways to keep music playlists in the cloud that form a key component of a lawsuit Sonos Inc. filed over the Google Play Music system. Sonos called that contention “nonsense.”        Sonos, an early proponent of connected home speakers, has claimed that Google gained knowledge of the technology through a partnership to integrate Google Play into the Sonos platform, and then decided to sell its own product line and undercut Sonos on price.              In a court filing Tuesday, the Alphabet unit said “Google, not Sonos, conceived of the cloud queue idea” and thus should be listed as owner and inventor of two of the Sonos patents. It also contends a 2013 Content Integration Agreement prohibits Sonos from claiming ownership of any technology developed during the partnership.",
@@ -429,7 +429,7 @@ const PostData = [
   },
   {
       id: 23,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.indianexpress.com/2021/11/Sonos_Roam_Speaker.jpeg",
       title: "Dummy blog 7",
       desc: "Alphabet Inc.’s Google said it’s the rightful owner of patents on ways to keep music playlists in the cloud that form a key component of a lawsuit Sonos Inc. filed over the Google Play Music system. Sonos called that contention “nonsense.”        Sonos, an early proponent of connected home speakers, has claimed that Google gained knowledge of the technology through a partnership to integrate Google Play into the Sonos platform, and then decided to sell its own product line and undercut Sonos on price.              In a court filing Tuesday, the Alphabet unit said “Google, not Sonos, conceived of the cloud queue idea” and thus should be listed as owner and inventor of two of the Sonos patents. It also contends a 2013 Content Integration Agreement prohibits Sonos from claiming ownership of any technology developed during the partnership.",
@@ -441,7 +441,7 @@ const PostData = [
   },
   {
       id: 24,
-      author: "Sahil Dunge",
+      author: "Rahul Shrestha",
       imgURL: "https://images.indianexpress.com/2021/11/Sonos_Roam_Speaker.jpeg",
       title: "Dummy blog 8",
       desc: "Alphabet Inc.’s Google said it’s the rightful owner of patents on ways to keep music playlists in the cloud that form a key component of a lawsuit Sonos Inc. filed over the Google Play Music system. Sonos called that contention “nonsense.”        Sonos, an early proponent of connected home speakers, has claimed that Google gained knowledge of the technology through a partnership to integrate Google Play into the Sonos platform, and then decided to sell its own product line and undercut Sonos on price.              In a court filing Tuesday, the Alphabet unit said “Google, not Sonos, conceived of the cloud queue idea” and thus should be listed as owner and inventor of two of the Sonos patents. It also contends a 2013 Content Integration Agreement prohibits Sonos from claiming ownership of any technology developed during the partnership.",
