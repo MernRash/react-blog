@@ -10,7 +10,20 @@ import More from "../utility/more";
 import { FaFacebookSquare,FaTwitterSquare,FaInstagramSquare,FaYoutubeSquare } from 'react-icons/fa'
 import { useParams } from "react-router";
 
-
+// function relatedCards(data){
+//     return  <div className="more-card-container">
+//     <h4>More from the Siren</h4>
+//     <hr />
+//     <div className="card-container">
+//     <div>
+//         <span>Also tagged ReactJS</span>
+//         <img src={data.imgURL} alt="blog_img"></img>
+//         <h2>{data.title}</h2>
+//         <Author name={data.author}/>
+//     </div>
+//     </div>
+//     </div>
+// }
 
 export default function Blog(){
 
@@ -65,8 +78,8 @@ export default function Blog(){
             
         </div>
 
-// {filterPostdata.slice(1,4).map((item)=>return(<More author={item.author} title={item.title} imgURL = {item.imgURL} />));
-        <More />
+            <More />
+           
         </>
     )
 }

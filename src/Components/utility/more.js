@@ -1,36 +1,30 @@
-import React from "react";
-import Latest_Img from '../images/latest-article.jpg'
+import React, { useContext } from "react";
+import Latest_Img from "../images/latest-article.jpg";
 import Author from "../Author/author";
-import './style.css';
+import "./style.css";
+import { PostDataContext } from "../ContextData/PostsDataContext";
+import { Link } from "react-router-dom";
 
-function More(){
-
-    return(
-        <div className="more-card-container">
-            <h4>More from the Siren</h4>
-            <hr />
-            <div className="card-container">
-            <div>
-                <span>Also tagged ReactJS</span>
-                <img src={Latest_Img} alt="blog_img"></img>
-                <h2>Joshua Tree Overnight Adventure</h2>
-                <Author />
-            </div>
-            <div>
-                <span>Related Reads</span>
-                <img src={Latest_Img} alt="blog_img"></img>
-                <h2>Joshua Tree Overnight Adventure</h2>
-                <Author />
-            </div>
-            <div>
-                <span>Related Reads</span>
-                <img src={Latest_Img} alt="blog_img"></img>
-                <h2>Joshua Tree Overnight Adventure</h2>
-                <Author />
-            </div>
-            </div>
-        </div>
-    )
+function More() {
+  const postData = useContext(PostDataContext);
+  return (
+    <div className="more-card-container">
+      <h4>More from the Siren</h4>
+      <hr />
+      {console.log(postData)}
+      <div className="card-container">
+        {postData.slice(1, 4).map((value) => {
+            return <div>
+            <strong><span>Also tagged ReactJS</span></strong>
+            <br />
+            <img src={value.imgURL} alt="blog_img"></img>
+           <Link onClick={()=>window.scrollTo(0,0)} to={`/${value.category}/${value.id}`} > <h2>{value.title}</h2> </Link>
+            <Author name={value.author} />
+          </div>;
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default More;
