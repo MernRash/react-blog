@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-
 import Author from "../Author/author";
 import "./style.css";
 import { PostDataContext } from "../ContextData/PostsDataContext";
