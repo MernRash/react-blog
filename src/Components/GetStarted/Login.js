@@ -22,7 +22,9 @@ if(user==null){
         {userLoggedIn ? <UserProfile /> : 
             <>
             {
-                isNewUser ?   <SignUP isNewUser = {()=>setIsNewUser(!isNewUser)}/> : <form>
+                isNewUser ?   <SignUP isNewUser = {()=>setIsNewUser(!isNewUser)}/> : 
+                
+                <form>
                 <h2>LogIn</h2>
                 <div className="input-container">
             <TextField label='Username' placeholder='Enter username' fullWidth required/>

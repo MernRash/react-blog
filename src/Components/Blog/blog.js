@@ -1,7 +1,7 @@
-import React,{useContext,useState,useEffect} from "react";
+import React,{useState,useEffect} from "react";
 import './blog.css';
-import { PostDataContext } from "../ContextData/PostsDataContext";
-import Banner from "../images/post-hero-img.png";
+// import { PostDataContext } from "../ContextData/PostsDataContext";
+// import Banner from "../images/post-hero-img.png";
 // import VS_Code from "../images/code-ss-post.png";
 import Clap from "../images/clap.png";
 import Share from "../images/share.png";
@@ -30,22 +30,9 @@ export default function Blog(){
         .catch((err)=> {
           console.log(err);
         })
-      },[id]);
+      },[id,token]);
 
-    // const likesByBackend = (id) => {
-    //     const url = "https://node-blog-backend-app.herokuapp.com/api/v1/claps/updateClap";
-    //     console.log(id);
-    //     const config = { params : { blogId : id }, headers: {"authorization": `Bearer ${token}`}}
-    //     console.log(config);
-    //     axios.post(url,{}, config).then((res)=> {
-    //         console.log("asdsa",res);
-    //         setBlog(res.data.blogMatchById);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err)
-    //     })
-    //   }
-
+    
     const clapIncrease = ()=>{
 
       let URL = "https://node-blog-backend-app.herokuapp.com/api/v1/claps/updateClap";
@@ -69,7 +56,7 @@ export default function Blog(){
                 <>
                 <h2>{blog.title}</h2>
                 <hr/>
-                <div className="author-info">
+                <div className="author-info" key={blog.id}>
                     <Author name={blog.author}/>
                     <div className="author-social-profiles">
                         <FaFacebookSquare/>

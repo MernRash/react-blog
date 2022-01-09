@@ -1,12 +1,18 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
 import {Link} from 'react-router-dom'
 
-function UserProfile(){
+function UserProfile(props){
+    const navigate = useNavigate();
 
     const logOutClicked = () =>{
         localStorage.removeItem("user");
         localStorage.removeItem("token");
+
+        navigate('/',{replace: true});
+        console.log(localStorage.getItem("user"));
+        props.userSignedOut();
         // localStorage.setItem("token","")
         /* This will help in Reloading the Page */
         // window.location.reload(false);
@@ -26,4 +32,22 @@ function UserProfile(){
     )
 }
 
-export default UserProfile;
+
+const mapStateToProps = (state) =>{
+    console.log(state);
+    return {
+      state
+    }
+  };
+  
+  const mapDispatchToState = (dispatch)=>{
+  
+    return{
+      userSignedOut : ()=>{
+        const authSignOUT = localStorage.getItem("user");
+        dispatch({type:"logOut",data:authSignOUT})
+      }
+    }
+  }
+
+export default connect(mapStateToProps,mapDispatchToState)(UserProfile);

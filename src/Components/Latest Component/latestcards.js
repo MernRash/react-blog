@@ -1,4 +1,4 @@
-import React,{useContext,useState,useEffect} from "react";
+import React,{useContext} from "react";
 import "./latestCard.css";
 import { Link,useParams } from "react-router-dom";
 import { PostDataContext } from "../ContextData/PostsDataContext";

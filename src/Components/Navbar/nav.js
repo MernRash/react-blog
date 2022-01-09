@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./nav.css";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
+  console.log("Render Navbar");
   const [showNavLinks, setShowNavLinks] = useState(false);
 
   const navLinks = [
@@ -15,12 +17,20 @@ function NavBar() {
     { to: "/food", catagory: "Food", id: 6 },
   ];
 
-  let userLoggedIn = true;
+  const [onLogOut,setOnLogOut] = useState(false);
+  
+  // let userLoggedIn = true;
   const user = localStorage.getItem("user");
+  // console.log(user);
 
-  if (user == null) {
-    userLoggedIn = false;
-  }
+  useEffect(()=>{
+
+    if(user==null && onLogOut=== false){
+      setOnLogOut(true)
+    }
+  },[onLogOut,user]);
+
+ 
 
   return (
     <>
@@ -38,7 +48,7 @@ function NavBar() {
                   <NavLink
                     to={value.to}
                     key={index}
-                    activeClassName="active"
+                    activeclassname="active"
                     exact
                   >
                     {value.catagory}{" "}
@@ -48,7 +58,7 @@ function NavBar() {
             })}
             <NavLink to="/get-started">
               <button className="btn">
-                {userLoggedIn ? "View Profile" : "Get Started"}
+                {!(onLogOut) ? "View Profile" : "Get Started"}
               </button>
             </NavLink>
           </ul>
@@ -64,4 +74,12 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+const mapStateToProps = (state) =>{
+  console.log(state);
+  return {
+    state
+  }
+} 
+
+
+export default connect(mapStateToProps)(NavBar);

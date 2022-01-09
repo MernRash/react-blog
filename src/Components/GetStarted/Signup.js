@@ -2,14 +2,16 @@ import React,{useState} from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import {useNavigate} from 'react-router-dom'
+import { connect } from "react-redux";
 import axios from "axios";
 
-export default function SignUP(props) {
+function SignUP(props) {
+  // console.log(props)
   const [fullName, setFullName] = useState("");
   const [passValue, setPassValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  const [token,setToken] = useState(()=>localStorage.getItem("token" || ""));
-  const [err, setError] = useState(null);
+  const [,setToken] = useState(()=>localStorage.getItem("token" || ""));
+  const [, setError] = useState(null);
   const navigate = useNavigate();
 
   const submitData = (e) => {
@@ -43,6 +45,7 @@ console.log(token);
 
       /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
       navigate('/home', {replace: true});
+      props.userSignedIn();
       // window.location.reload(false);
   };
 
@@ -92,3 +95,22 @@ console.log(token);
     </div>
   );
 }
+
+const mapStateToProps = (state) =>{
+  console.log(state);
+  return {
+    state
+  }
+};
+
+const mapDispatchToState = (dispatch)=>{
+
+  return{
+    userSignedIn : ()=>{
+      const authSignIn = localStorage.getItem("user");
+      dispatch({type:"login",data:authSignIn})
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToState)(SignUP);

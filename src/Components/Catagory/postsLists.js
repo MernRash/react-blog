@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, {  useState, useEffect } from "react";
 import "./postList.css";
 import { BsArrowDown } from 'react-icons/bs';
 // import { PostDataContext } from "../ContextData/PostsDataContext";
@@ -19,12 +19,10 @@ const [blogs,setBlogs]= useState([]);
   const updateCount = () => {
     setcount((prev) => prev + 2);
   };
-  useEffect(() => {
-    setcount(2);
-  }, [catagory]);
+ 
 
   useEffect(()=>{
-
+    setcount(2);
     const config = {params:{catagory},headers: {"authorization": `Bearer ${token}`}}
     const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/"
     axios.get(url,config).then((res)=>{
@@ -32,7 +30,7 @@ const [blogs,setBlogs]= useState([]);
       setBlogs(res.data.filteredData);
     }).catch((err)=>console.error(err));
     
-  },[catagory])
+  },[catagory,token])
   // const {id} = useParams();
   // const filterBlogs = PostData.filter((values)=> values.category===catagory);
   // console.log(PostData.filter((values)=> values.category===catagory));
