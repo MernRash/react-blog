@@ -11,6 +11,7 @@ export default function SignUP(props) {
   const [token,setToken] = useState(()=>localStorage.getItem("token" || ""));
   const [err, setError] = useState(null);
   const navigate = useNavigate();
+
   const submitData = (e) => {
    
     e.preventDefault();
@@ -42,7 +43,7 @@ console.log(token);
 
       /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
       navigate('/home', {replace: true});
-      window.location.reload(false);
+      // window.location.reload(false);
   };
 
  

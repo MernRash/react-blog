@@ -9,7 +9,7 @@ function UserProfile(){
         localStorage.removeItem("token");
         // localStorage.setItem("token","")
         /* This will help in Reloading the Page */
-        window.location.reload(false);
+        // window.location.reload(false);
     }
 
     return(
