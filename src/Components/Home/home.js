@@ -8,6 +8,7 @@ import Intro from "../Navbar/Intro/Intro";
 
 
 function Home(){
+  
     return(
         <div>
           <Intro />

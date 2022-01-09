@@ -1,17 +1,21 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./postList.css";
 import { BsArrowDown } from 'react-icons/bs';
-import { PostDataContext } from "../ContextData/PostsDataContext";
+// import { PostDataContext } from "../ContextData/PostsDataContext";
 // import Latest_Img from "../images/latest-article.jpg";
 import SectionTitle from "../utility/sectionTitle";
 import { useParams, Link } from "react-router-dom";
+import axios from "axios";
+
 
 function PostList(props) {
   const [count, setcount] = useState(2);
-  const PostData = useContext(PostDataContext);
+  // const PostData = useContext(PostDataContext);
   const { catagory } = useParams();
-  console.log(catagory)
+const [blogs,setBlogs]= useState([]);
+  // console.log(catagory)
 
+  const token = localStorage.getItem("token");
   const updateCount = () => {
     setcount((prev) => prev + 2);
   };
@@ -19,14 +23,24 @@ function PostList(props) {
     setcount(2);
   }, [catagory]);
 
+  useEffect(()=>{
+
+    const config = {params:{catagory},headers: {"authorization": `Bearer ${token}`}}
+    const url = "http://localhost:8000/api/v1/blog/"
+    axios.get(url,config).then((res)=>{
+      console.log(res.data.filteredData);
+      setBlogs(res.data.filteredData);
+    }).catch((err)=>console.error(err));
+    
+  },[catagory])
   // const {id} = useParams();
-  const filterBlogs = PostData.filter((values)=> values.category===catagory);
-  console.log(PostData.filter((values)=> values.category===catagory));
+  // const filterBlogs = PostData.filter((values)=> values.category===catagory);
+  // console.log(PostData.filter((values)=> values.category===catagory));
   return (
     <div>
       <SectionTitle text={catagory} width={"15%"} transform={"capitalize"} />
 
-      {filterBlogs.slice(0,count).map((values,index) => {
+      {blogs.slice(0,count).map((values,index) => {
         return (
           <div className="post-list-container" key={index}>
             <div className="post-image-container">
@@ -43,6 +57,8 @@ function PostList(props) {
           </div>
         );
       })}
+
+     
 
 <div className="more" onClick={updateCount}>
                         <span >LOAD MORE</span>

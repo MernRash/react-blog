@@ -3,19 +3,26 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './login.css';
 import SignUP from './Signup';
+import UserProfile from './userProfile';
 
 
 export default function Login(){
-const [showLogIn,setShowLogIn] = useState(true);
+const [isNewUser,setIsNewUser] = useState(true);
+
+const user = localStorage.getItem("user");
+let userLoggedIn = true;
+
+if(user==null){
+    userLoggedIn = false;
+}
+
     return(
         <div className="log-in-container">
-        {
-            showLogIn ? 
-            <SignUP showLogIn = {()=>setShowLogIn(!showLogIn)}/>
-            :
-            
 
-            <form>
+        {userLoggedIn ? <UserProfile /> : 
+            <>
+            {
+                isNewUser ?   <SignUP isNewUser = {()=>setIsNewUser(!isNewUser)}/> : <form>
                 <h2>LogIn</h2>
                 <div className="input-container">
             <TextField label='Username' placeholder='Enter username' fullWidth required/>
@@ -23,11 +30,15 @@ const [showLogIn,setShowLogIn] = useState(true);
             </div>
             <div className="btn-container">
             <Button className="btn" variant="contained">Login</Button>
-            <span onClick={()=>setShowLogIn(!showLogIn)}>Don't have an account? SignUp</span>
+            <span onClick={()=>setIsNewUser(!isNewUser)}>Don't have an account? SignUp</span>
             </div>
-            </form>
-        
+            </form>}
+            
+            </>
         }
+
+
+       
        </div>
     )
 }

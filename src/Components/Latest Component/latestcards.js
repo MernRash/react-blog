@@ -1,42 +1,23 @@
-import React,{useContext} from "react";
+import React,{useContext,useState,useEffect} from "react";
 import "./latestCard.css";
 import { Link,useParams } from "react-router-dom";
 import { PostDataContext } from "../ContextData/PostsDataContext";
 // import Latest_Img from "../images/latest-article.jpg";
 
-// const latestCardData = [
-//   {
-//     id: 1,
-//     title: "Joshua Tree Overnight Adventure",
-//     desc: "Gujrat is vastly underrated and it's a mystery to us why the region isn't more well known as tourist destination. It has a plethora pf temples and places.",
-//     catagory:"Travel",
-//     date : "October 17"
-    
-//   },
-//   {
-//     id: 2,
-//     title: "Joshua Tree Overnight Adventure",
-//     desc: "Gujrat is vastly underrated and it's a mystery to us why the region isn't more well known as tourist destination. It has a plethora pf temples and places.",
-//     catagory:"Travel",
-//     date : "October 17"
-//   },
-//   {
-//     id: 3,
-//     title: "Joshua Tree Overnight Adventure",
-//     desc: "Gujrat is vastly underrated and it's a mystery to us why the region isn't more well known as tourist destination. It has a plethora pf temples and places.",
-//     catagory:"Travel",
-//     date : "October 17"
-//   },
-//   {
-//     id: 4,
-//     title: "Joshua Tree Overnight Adventure",
-//     desc: "Gujrat is vastly underrated and it's a mystery to us why the region isn't more well known as tourist destination. It has a plethora pf temples and places.",
-//     catagory:"Travel",
-//     date : "October 17"
-//   },
-// ];
 
 function LatestCard() {
+
+  // useEffect(()=>{
+
+  //   const config = {params:{catagory},headers: {"authorization": `Bearer ${token}`}}
+  //   const url = "http://localhost:8000/api/v1/blog/"
+  //   axios.get(url,config).then((res)=>{
+  //     console.log(res.data.filteredData);
+  //     setBlogs(res.data.filteredData);
+  //   }).catch((err)=>console.error(err));
+    
+  // },[catagory])
+  
   const blogs = useContext(PostDataContext)
   const filterPost = blogs.filter((values)=> values.views>=100);
   const { catagory } = useParams();
