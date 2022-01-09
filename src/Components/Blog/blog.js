@@ -22,7 +22,7 @@ export default function Blog(){
     
     useEffect(()=> {
         const config = { params : { blogId : id }, headers: {"authorization": `Bearer ${token}`}}
-        const url = "http://localhost:8000/api/v1/blog/singlePost"
+        const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/singlePost"
         axios.get(url, config).then((res)=> {
           // console.log("From line 27",res.data.blogMatchById);
           return setBlog(res.data.blogMatchById);
@@ -33,7 +33,7 @@ export default function Blog(){
       },[id]);
 
     // const likesByBackend = (id) => {
-    //     const url = "http://localhost:8000/api/v1/claps/updateClap";
+    //     const url = "https://node-blog-backend-app.herokuapp.com/api/v1/claps/updateClap";
     //     console.log(id);
     //     const config = { params : { blogId : id }, headers: {"authorization": `Bearer ${token}`}}
     //     console.log(config);
@@ -48,7 +48,7 @@ export default function Blog(){
 
     const clapIncrease = ()=>{
 
-      let URL = "http://localhost:8000/api/v1/claps/updateClap";
+      let URL = "https://node-blog-backend-app.herokuapp.com/api/v1/claps/updateClap";
       const config = { params : { blogId : id }, headers: {"authorization": `Bearer ${token}`}}
 
       axios.post(URL,null,config).then((res)=> setBlog(res.data.blogMatchById)).catch(err=>console.log(err));

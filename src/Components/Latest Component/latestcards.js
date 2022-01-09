@@ -10,7 +10,7 @@ function LatestCard() {
   // useEffect(()=>{
 
   //   const config = {params:{catagory},headers: {"authorization": `Bearer ${token}`}}
-  //   const url = "http://localhost:8000/api/v1/blog/"
+  //   const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/"
   //   axios.get(url,config).then((res)=>{
   //     console.log(res.data.filteredData);
   //     setBlogs(res.data.filteredData);

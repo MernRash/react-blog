@@ -29,7 +29,7 @@ export default function SignUP(props) {
 
     const body = { name, password, email };
     axios
-      .post("http://localhost:8000/api/v1/auth/signup", body)
+      .post("https://node-blog-backend-app.herokuapp.com/api/v1/auth/signup", body)
       .then((res) =>{
        
        const token = res.data.data.token;
