@@ -1,31 +1,51 @@
-import React,{useContext} from "react";
+import React,{useState,useEffect} from "react";
 import "./latestCard.css";
-import { Link,useParams } from "react-router-dom";
-import { PostDataContext } from "../ContextData/PostsDataContext";
+import { Link } from "react-router-dom";
+// import { PostDataContext } from "../ContextData/PostsDataContext";
+
+import axios from "axios";
 // import Latest_Img from "../images/latest-article.jpg";
 
 
 function LatestCard() {
+  // const {id} = useParams();
+  const token = localStorage.getItem("token");
+  const [dataForMost, setDataForMost] = useState([]);
+
+  useEffect(()=> {
+    // const url = "https://blog-back-end-01.herokuapp.com/api/v1/blogs/filterByClap";
+    const url1 = "http://localhost:8000/api/v1/blog/filterByClap";
+    const config = { headers: {"authorization": `Bearer ${token}`}}
+
+    axios.get(url1, config).then((res)=> {
+      console.log(res)
+      setDataForMost(res.data.filterDataByClap)
+    }).catch((err)=> {
+      console.log(err)
+    })
+  },[token])
 
   // useEffect(()=>{
 
-  //   const config = {params:{catagory},headers: {"authorization": `Bearer ${token}`}}
-  //   const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/"
+  //   const config = {params:{ blogId : id },headers: {"authorization": `Bearer ${token}`}}
+  //   const url = "http://localhost:8000/api/v1/home/"
   //   axios.get(url,config).then((res)=>{
-  //     console.log(res.data.filteredData);
-  //     setBlogs(res.data.filteredData);
+  //     console.log(res,"Response from backend");
+  //     // setBlogs(res.data.filteredData);
   //   }).catch((err)=>console.error(err));
     
-  // },[catagory])
+  // },[id,token])
   
-  const blogs = useContext(PostDataContext)
-  const filterPost = blogs.filter((values)=> values.views>=100);
-  const { catagory } = useParams();
-  console.log(catagory)
-  console.log(filterPost);
+  // const blogs = useContext(PostDataContext)
+
+
+  // const filterPost = blogs.filter((values)=> values.views>=100);
+  // // const { catagory } = useParams();
+  // console.log(catagory)
+  // console.log(filterPost);
   return (
    <div className="latest-flex">
-      {filterPost.map((item,index) => {
+      {dataForMost.slice(0,4).map((item,index) => {
         return (
           <>
           <div className="latest-card-main-container" key={index}>

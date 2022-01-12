@@ -15,7 +15,7 @@ function Home(){
       
         
         <div className="latest-card-container">
-        <SectionTitle text="The Latest" />
+        <SectionTitle text="Most Recomended" />
         <LatestCard />   
         
         </div>

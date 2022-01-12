@@ -1,8 +1,5 @@
 import React,{useState,useEffect} from "react";
 import './blog.css';
-// import { PostDataContext } from "../ContextData/PostsDataContext";
-// import Banner from "../images/post-hero-img.png";
-// import VS_Code from "../images/code-ss-post.png";
 import Clap from "../images/clap.png";
 import Share from "../images/share.png";
 import Author from "../Author/author";
@@ -15,8 +12,7 @@ export default function Blog(){
 
     const {id} = useParams();
     console.log(id)
-    // const PostData = useContext(PostDataContext);
-    // const filterPostData = PostData.filter((values)=>values.id === +id)
+
     const [blog, setBlog] = useState(null);
     const token = localStorage.getItem("token");
     
@@ -24,7 +20,6 @@ export default function Blog(){
         const config = { params : { blogId : id }, headers: {"authorization": `Bearer ${token}`}}
         const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/singlePost"
         axios.get(url, config).then((res)=> {
-          // console.log("From line 27",res.data.blogMatchById);
           return setBlog(res.data.blogMatchById);
         })
         .catch((err)=> {

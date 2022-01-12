@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 import { connect } from "react-redux";
+
 import {Link} from 'react-router-dom'
 
 function UserProfile(props){
@@ -27,7 +29,7 @@ function UserProfile(props){
         <br />
         <br />
 
-        <Link to="/get-started"><button onClick={logOutClicked}>Log Out</button> </Link>
+        <Link to="/get-started"><Button className="btn" onClick={logOutClicked}>Log Out</Button > </Link>
         </>
     )
 }
