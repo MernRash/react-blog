@@ -17,7 +17,7 @@ function ArticleCard() {
 
 
 useEffect(()=>{
- const url1 = "http://localhost:8000/api/v1/blog/filterByDate";
+ const url1 = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
     const config = { headers: {"authorization": `Bearer ${token}`}}
 
     axios.get(url1, config).then((res)=> {

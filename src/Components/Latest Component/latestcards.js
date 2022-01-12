@@ -14,7 +14,7 @@ function LatestCard() {
 
   useEffect(()=> {
     // const url = "https://blog-back-end-01.herokuapp.com/api/v1/blogs/filterByClap";
-    const url1 = "http://localhost:8000/api/v1/blog/filterByClap";
+    const url1 = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByClap";
     const config = { headers: {"authorization": `Bearer ${token}`}}
 
     axios.get(url1, config).then((res)=> {
