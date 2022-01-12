@@ -19,7 +19,7 @@ function More() {
             <img src={value.imgURL} alt="blog_img"></img>
            <Link onClick={()=>window.scrollTo(0,0)} to={`/${value.category}/${value.id}`} > <h2>{value.title}</h2> </Link>
             <Author name={value.author} />
-          </div>;
+          </div>
         })}
       </div>
     </div>
