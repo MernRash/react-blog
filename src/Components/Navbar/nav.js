@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./nav.css";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
-  console.log("Render Navbar");
+
   const [showNavLinks, setShowNavLinks] = useState(false);
 
   const navLinks = [
@@ -17,20 +17,17 @@ function NavBar() {
     { to: "/food", catagory: "Food", id: 6 },
   ];
 
-  const [onLogOut,setOnLogOut] = useState(false);
-  
-  // let userLoggedIn = true;
+  const [onLogOut, setOnLogOut] = useState(false);
+
+
   const user = localStorage.getItem("user");
-  // console.log(user);
 
-  useEffect(()=>{
 
-    if(user==null && onLogOut=== false){
-      setOnLogOut(true)
+  useEffect(() => {
+    if (user == null && onLogOut === false) {
+      setOnLogOut(true);
     }
-  },[onLogOut,user]);
-
- 
+  }, [onLogOut, user]);
 
   return (
     <>
@@ -42,15 +39,10 @@ function NavBar() {
 
         <div className="head-list">
           <ul className={showNavLinks ? "nav-links-mobile" : "nav-links"}>
-            {navLinks.map((value, index) => {
+            {navLinks.map((value) => {
               return (
-                <li>
-                  <NavLink
-                    to={value.to}
-                    key={index}
-                    activeclassname="active"
-                    exact
-                  >
+                <li key={value.id}>
+                  <NavLink to={value.to} activeclassname="active">
                     {value.catagory}{" "}
                   </NavLink>{" "}
                 </li>
@@ -58,7 +50,7 @@ function NavBar() {
             })}
             <NavLink to="/get-started">
               <button className="btn">
-                {!(onLogOut) ? "View Profile" : "Get Started"}
+                {!onLogOut ? "View Profile" : "Get Started"}
               </button>
             </NavLink>
           </ul>
@@ -74,12 +66,11 @@ function NavBar() {
   );
 }
 
-const mapStateToProps = (state) =>{
-  console.log(state);
-  return {
-    state
-  }
-} 
+const mapStateToProps = (state) => {
 
+  return {
+    state,
+  };
+};
 
 export default connect(mapStateToProps)(NavBar);

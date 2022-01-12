@@ -12,8 +12,8 @@ function More() {
       <hr />
       {console.log(postData)}
       <div className="card-container">
-        {postData.slice(1, 4).map((value) => {
-            return <div>
+        {postData.slice(1, 4).map((value,indx) => {
+            return <div key={indx}>
             <strong><span>Also tagged ReactJS</span></strong>
             <br />
             <img src={value.imgURL} alt="blog_img"></img>

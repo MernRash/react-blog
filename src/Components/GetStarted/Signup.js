@@ -1,7 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import axios from "axios";
 
@@ -10,46 +10,50 @@ function SignUP(props) {
   const [fullName, setFullName] = useState("");
   const [passValue, setPassValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  const [,setToken] = useState(()=>localStorage.getItem("token" || ""));
+  const [, setToken] = useState(() => localStorage.getItem("token" || ""));
   const [, setError] = useState(null);
   const navigate = useNavigate();
 
   const submitData = (e) => {
-   
     e.preventDefault();
     const name = fullName;
     const password = passValue;
     const email = emailValue;
-    console.log(password, email);
-    if (password.length < 6 || email.length < 6) {
+  
+    if (
+      password.length < 6 &&
+      email.length < 6 &&
+      password.trim() === "" &&
+      email.trim() === ""
+    ) {
       setError("too Short!!!");
       return;
     }
     setError("");
 
     localStorage.setItem("user", "Signed");
-    console.log("here");
+;
 
+    localStorage.setItem("userSignedUP","loggedIn")
     const body = { name, password, email };
     axios
-      .post("https://node-blog-backend-app.herokuapp.com/api/v1/auth/signup", body)
-      .then((res) =>{
-       
-       const token = res.data.data.token;
-        setToken(res.data.data.token)
-        console.log(res.data.data.token)
-console.log(token);
-        localStorage.setItem("token",token)
+      .post(
+        "https://node-blog-backend-app.herokuapp.com/api/v1/auth/signup",
+        body
+      )
+      .then((res) => {
+        const token = res.data.data.token;
+        setToken(res.data.data.token);
+  
+        localStorage.setItem("token", token);
       })
       .catch((err) => console.log(err.status, err.messege));
 
-      /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
-      navigate('/home', {replace: true});
-      props.userSignedIn();
-      // window.location.reload(false);
+    /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
+    navigate("/home", { replace: true });
+    props.userSignedIn();
+    // window.location.reload(false);
   };
-
- 
 
   return (
     <div className="SignUp-Container">
@@ -96,21 +100,20 @@ console.log(token);
   );
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   console.log(state);
   return {
-    state
-  }
+    state,
+  };
 };
 
-const mapDispatchToState = (dispatch)=>{
-
-  return{
-    userSignedIn : ()=>{
+const mapDispatchToState = (dispatch) => {
+  return {
+    userSignedIn: () => {
       const authSignIn = localStorage.getItem("user");
-      dispatch({type:"login",data:authSignIn})
-    }
-  }
-}
+      dispatch({ type: "login", data: authSignIn });
+    },
+  };
+};
 
-export default connect(mapStateToProps,mapDispatchToState)(SignUP);
+export default connect(mapStateToProps, mapDispatchToState)(SignUP);
