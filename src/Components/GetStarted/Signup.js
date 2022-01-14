@@ -19,7 +19,7 @@ function SignUP(props) {
     const name = fullName;
     const password = passValue;
     const email = emailValue;
-  
+
     if (
       password.length < 6 &&
       email.length < 6 &&
@@ -32,9 +32,7 @@ function SignUP(props) {
     setError("");
 
     localStorage.setItem("user", "Signed");
-;
-
-    localStorage.setItem("userSignedUP","loggedIn")
+    localStorage.setItem("userSignedUP", "loggedIn");
     const body = { name, password, email };
     axios
       .post(
@@ -44,7 +42,7 @@ function SignUP(props) {
       .then((res) => {
         const token = res.data.data.token;
         setToken(res.data.data.token);
-  
+
         localStorage.setItem("token", token);
       })
       .catch((err) => console.log(err.status, err.messege));

@@ -12,7 +12,6 @@ function PostList(props) {
   const { catagory } = useParams();
   const [blogs, setBlogs] = useState([]);
 
-
   const token = localStorage.getItem("token");
   const updateCount = () => {
     setcount((prev) => prev + 2);
@@ -28,7 +27,6 @@ function PostList(props) {
     axios
       .get(url, config)
       .then((res) => {
-       
         setBlogs(res.data.filteredData);
       })
       .catch((err) => console.error(err));

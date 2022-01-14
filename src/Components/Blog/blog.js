@@ -16,7 +16,6 @@ import axios from "axios";
 export default function Blog() {
   const { id } = useParams();
 
-
   const [blog, setBlog] = useState(null);
   const token = localStorage.getItem("token");
 
@@ -67,7 +66,6 @@ export default function Blog() {
                 <span>Share this article</span>
               </div>
             </div>
-           
 
             <>
               <h2>{blog.title}</h2>
@@ -82,14 +80,11 @@ export default function Blog() {
                 </div>
               </div>
               <hr />
-            
+
               <p>{blog.desc}</p>
               <img src={blog.imgURL} alt="blog-img" />
 
               <div className="blog-keyword-container">
-                
-               
-
                 <br />
                 <div onClick={clapIncrease}>
                   <img src={Clap} alt="clap-img" />

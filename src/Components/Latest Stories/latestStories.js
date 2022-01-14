@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SectionTitle from "../utility/sectionTitle";
 import { BsArrowDown } from "react-icons/bs";
 import "./latestStories.css";
@@ -7,28 +7,27 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function LatestStories() {
-
   const [postNumber, setPostNumber] = React.useState(4);
 
-  const token = localStorage.getItem("token");
   const [latestStories, setLatestData] = useState([]);
 
   useEffect(() => {
-    const url1 =
-      "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
-    const config = { headers: { authorization: `Bearer ${token}` } };
+    setTimeout(() => {
+      const token = localStorage.getItem("token");
+      const url1 =
+        "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
+      const config = { headers: { authorization: `Bearer ${token}` } };
 
-    axios
-      .get(url1, config)
-      .then((res) => {
-       
-        setLatestData(res.data.filterDataByDate);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [token]);
-
+      axios
+        .get(url1, config)
+        .then((res) => {
+          setLatestData(res.data.filterDataByDate);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, 500);
+  }, []);
 
   return (
     <div>

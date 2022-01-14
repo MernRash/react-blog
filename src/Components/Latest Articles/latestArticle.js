@@ -9,23 +9,27 @@ import { Link } from "react-router-dom";
 
 function ArticleCard() {
   const [postNumber, setPostNumber] = useState(6);
-  const token = localStorage.getItem("token");
+
   const [latestData, setLatestData] = useState([]);
 
-  useEffect(() => {
-    const url1 ="https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
-    const config = { headers: { authorization: `Bearer ${token}` } };
+  // const [token, setToken] = useState(null);
 
-    axios
-      .get(url1, config)
-      .then((res) => {
-    
-        setLatestData(res.data.filterDataByDate);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [token]);
+  useEffect(() => {
+    setTimeout(() => {
+      const token = localStorage.getItem("token");
+      const url1 =
+        "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
+      const config = { headers: { authorization: `Bearer ${token}` } };
+      axios
+        .get(url1, config)
+        .then((res) => {
+          setLatestData(res.data.filterDataByDate);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, 500);
+  }, []);
 
   return (
     <div className="article-main-container">
@@ -33,17 +37,17 @@ function ArticleCard() {
         {latestData.slice(0, postNumber).map((item, index) => {
           return (
             <div key={item.id}>
-            <Link to={`/${item.category}/${item.id}`}>
-              {" "}
-              <ArticleContent
-                key = {item}
-                imgSrc={item.imgURL}
-                title={item.title}
-                desc={item.desc.substring(0, 150)}
-                catagory={item.category}
-                date={item.date}
-              />
-            </Link>
+              <Link to={`/${item.category}/${item.id}`}>
+                {" "}
+                <ArticleContent
+                  key={item}
+                  imgSrc={item.imgURL}
+                  title={item.title}
+                  desc={item.desc.substring(0, 150)}
+                  catagory={item.category}
+                  date={item.date}
+                />
+              </Link>
             </div>
           );
         })}

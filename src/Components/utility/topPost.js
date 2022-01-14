@@ -12,7 +12,7 @@ export default function TopPostContent() {
 
   const token = localStorage.getItem("token");
   useEffect(() => {
-    const url = "http://localhost:8000/api/v1/blog/filtertopPost";
+    const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filtertopPost";
     const config = { headers: { authorization: `Bearer ${token}` } };
 
     axios

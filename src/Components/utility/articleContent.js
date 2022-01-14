@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function ArticleContent(props) {
-
   return (
     <div className="article-content-container">
       <div className="article-image-container">

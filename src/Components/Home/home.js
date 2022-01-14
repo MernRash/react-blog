@@ -6,30 +6,26 @@ import ArticleCard from "../Latest Articles/latestArticle";
 import LatestStories from "../Latest Stories/latestStories";
 import Intro from "../Navbar/Intro/Intro";
 
+function Home() {
+  return (
+    <div>
+      <Intro />
 
-function Home(){
-  
-    return(
-        <div>
-          <Intro />
-      
-        
-        <div className="latest-card-container">
+      <div className="latest-card-container">
         <SectionTitle text="Most Recomended" />
-        <LatestCard />   
-        
-        </div>
+        <LatestCard />
+      </div>
 
-        <div className="article-container">
-        <SectionTitle text="Latest Articles" width = {"15%"} />
-      <ArticleCard />
-        </div>
+      <div className="article-container">
+        <SectionTitle text="Latest Articles" width={"15%"} />
+        <ArticleCard />
+      </div>
 
-        <div className="latest-stories-container">
+      <div className="latest-stories-container">
         <LatestStories />
-        </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Home;
