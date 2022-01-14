@@ -7,7 +7,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function LatestStories() {
-  const [postNumber, setPostNumber] = React.useState(4);
+  const [postNumber, setPostNumber] = useState(4);
 
   const [latestStories, setLatestData] = useState([]);
 
@@ -26,7 +26,7 @@ function LatestStories() {
         .catch((err) => {
           console.log(err);
         });
-    }, 500);
+    }, 900);
   }, []);
 
   return (

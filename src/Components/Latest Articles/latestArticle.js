@@ -28,7 +28,7 @@ function ArticleCard() {
         .catch((err) => {
           console.log(err);
         });
-    }, 500);
+    }, 900);
   }, []);
 
   return (
