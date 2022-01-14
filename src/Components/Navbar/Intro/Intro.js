@@ -1,7 +1,8 @@
 import './Intro.css';
-import React,{useContext} from "react";
+import React,{useEffect,useState} from "react";
 import { Link } from 'react-router-dom';
-import { PostDataContext } from '../../ContextData/PostsDataContext';
+// import { PostDataContext } from '../../ContextData/PostsDataContext';
+import axios from 'axios';
 
 
 
@@ -35,14 +36,37 @@ function secondaryGalleryTab(Data) {
 }
 
 function Intro() {
-    const PostData = useContext(PostDataContext)
+
+    const [postData,setPostData] = useState([])
+
+    useEffect(()=>{
+
+        setTimeout(()=>{
+
+            const token = localStorage.getItem("token");
+            const url1 =
+            "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByClap";
+            const config = { headers: { authorization: `Bearer ${token}` } };
+      
+            axios
+              .get(url1, config)
+              .then((res) => {
+                setPostData(res.data.filterDataByClap);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+        },500);
+    },[])
+
+    // const postData = useContext(PostDataContext)
     return (
         <div className="Intro-Container">
             <div className="intro">
 
-                {PostData.filter((item)=>item.id===1).map(firstGalleryTab)}
+                {postData.filter((item)=>item.id===1).map(firstGalleryTab)}
                 
-                {PostData.slice(2, 4).map(secondaryGalleryTab)}
+                {postData.slice(2, 4).map(secondaryGalleryTab)}
 
 
 
