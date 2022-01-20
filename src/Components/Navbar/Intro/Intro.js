@@ -41,7 +41,7 @@ function Intro() {
 
     useEffect(()=>{
 
-        setTimeout(()=>{
+       
 
             const token = localStorage.getItem("token");
             const url1 =
@@ -56,7 +56,7 @@ function Intro() {
               .catch((err) => {
                 console.log(err);
               });
-        },500);
+       
     },[])
 
     // const postData = useContext(PostDataContext)

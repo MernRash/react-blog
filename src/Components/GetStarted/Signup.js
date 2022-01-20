@@ -10,9 +10,14 @@ function SignUP(props) {
   const [fullName, setFullName] = useState("");
   const [passValue, setPassValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  const [, setToken] = useState(() => localStorage.getItem("token" || ""));
+  
+  // const [, setToken] = useState(() => localStorage.getItem("token" || ""));
   const [, setError] = useState(null);
   const navigate = useNavigate();
+
+  let token ="";
+
+  // const [error, setError] = useState(null);
 
   const submitData = (e) => {
     e.preventDefault();
@@ -31,8 +36,7 @@ function SignUP(props) {
     }
     setError("");
 
-    localStorage.setItem("user", "Signed");
-    localStorage.setItem("userSignedUP", "loggedIn");
+   
     const body = { name, password, email };
     axios
       .post(
@@ -40,16 +44,21 @@ function SignUP(props) {
         body
       )
       .then((res) => {
-        const token = res.data.data.token;
-        setToken(res.data.data.token);
+      
+        token = res.data.data.token;
 
         localStorage.setItem("token", token);
+        localStorage.setItem("user", "Signed");
+        localStorage.setItem("userSignedUP", "loggedIn");
+
+    /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
+
+        props.userSignedIn();
+    navigate("/home", { replace: true });
       })
       .catch((err) => console.log(err.status, err.messege));
 
-    /* In React Router V6 history.push is replaced with UseNavigate and we can use it to navigate Url but to reRender we will bw using Reload command. */
-    navigate("/home", { replace: true });
-    props.userSignedIn();
+    
     // window.location.reload(false);
   };
 

@@ -12,7 +12,7 @@ function LatestStories() {
   const [latestStories, setLatestData] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    
       const token = localStorage.getItem("token");
       const url1 =
         "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
@@ -26,7 +26,7 @@ function LatestStories() {
         .catch((err) => {
           console.log(err);
         });
-    }, 900);
+  
   }, []);
 
   return (

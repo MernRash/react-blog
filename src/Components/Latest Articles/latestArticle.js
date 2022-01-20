@@ -15,8 +15,7 @@ function ArticleCard() {
   // const [token, setToken] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      const token = localStorage.getItem("token");
+          const token = localStorage.getItem("token");
       const url1 =
         "https://node-blog-backend-app.herokuapp.com/api/v1/blog/filterByDate";
       const config = { headers: { authorization: `Bearer ${token}` } };
@@ -28,7 +27,7 @@ function ArticleCard() {
         .catch((err) => {
           console.log(err);
         });
-    }, 900);
+   
   }, []);
 
   return (
