@@ -16,7 +16,7 @@ function PostList(props) {
   const token = localStorage.getItem("token");
   const updateCount = () => {
     
-    setcount(() => count + 2);
+    setcount((prev) => prev + 2);
   };
 
   useEffect(() => {
