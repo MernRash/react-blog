@@ -9,19 +9,20 @@ import axios from "axios";
 function PostList(props) {
   const [count, setcount] = useState(2);
 
+  let limit;
   const { catagory } = useParams();
   const [blogs, setBlogs] = useState([]);
 
   const token = localStorage.getItem("token");
   const updateCount = () => {
     
-    setcount((prev) => prev + 2);
+    setcount(() => count + 2);
   };
 
   useEffect(() => {
 //     setcount(2);
     const config = {
-      params: { catagory },
+      params: { catagory ,limit},
       headers: { authorization: `Bearer ${token}` },
     };
     const url = "https://node-blog-backend-app.herokuapp.com/api/v1/blog/";
@@ -29,7 +30,7 @@ function PostList(props) {
       .get(url, config)
       .then((res) => {
         setBlogs(res.data.filteredData);
-        setcount(res.data.limit);
+        limit=res.data.filteredData.length;
       })
       .catch((err) => console.error(err));
   }, [catagory, token]);
@@ -56,11 +57,15 @@ function PostList(props) {
         );
       })}
 
+    {count < blogs.length && (
       <div className="more" onClick={updateCount}>
+      
         <span>LOAD MORE</span>
         <BsArrowDown style={{ color: "red" }} />
       </div>
-    </div>
+
+    )}
+        </div>
   );
 }
 
