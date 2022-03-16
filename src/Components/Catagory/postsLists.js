@@ -7,7 +7,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 function PostList(props) {
-  const [count, setcount] = useState(2);
+  const [count, setcount] = useState(0);
 
   let limit;
   const { catagory } = useParams();
