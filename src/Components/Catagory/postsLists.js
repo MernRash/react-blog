@@ -14,11 +14,12 @@ function PostList(props) {
 
   const token = localStorage.getItem("token");
   const updateCount = () => {
+    
     setcount((prev) => prev + 2);
   };
 
   useEffect(() => {
-    setcount(2);
+//     setcount(2);
     const config = {
       params: { catagory },
       headers: { authorization: `Bearer ${token}` },
@@ -28,6 +29,7 @@ function PostList(props) {
       .get(url, config)
       .then((res) => {
         setBlogs(res.data.filteredData);
+        setcount(res.data.limit);
       })
       .catch((err) => console.error(err));
   }, [catagory, token]);
