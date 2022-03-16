@@ -20,7 +20,7 @@ function PostList(props) {
   };
 
   useEffect(() => {
-//     setcount(2);
+    setcount(2);
     const config = {
       params: { catagory ,limit},
       headers: { authorization: `Bearer ${token}` },
