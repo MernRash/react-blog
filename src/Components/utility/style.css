@@ -1,0 +1,42 @@
+h3{
+    margin:0 0 20px 90px;
+    font-size:2rem;
+    border-bottom:3px solid red;
+    width:20%;
+}
+
+.advertise-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    height: 55vh;
+}
+
+
+.more-card-container {
+    padding: 2% 10%;
+    margin: 0 auto;
+    background-color: #fafafa;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-container div {
+    flex-basis: 30%;
+  }
+  
+  .card-container img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  @media screen and (min-width:300px) and (max-width:640px) {
+    
+    .card-container{
+      flex-direction: column;
+    }
+  }

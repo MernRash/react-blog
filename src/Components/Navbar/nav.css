@@ -1,0 +1,142 @@
+nav{
+    border-bottom: 2px solid lightgray;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.Logo{
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.Logo span{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.logo-head{
+    transform: rotate(270deg);
+}
+
+.lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.btn{
+    background-color: lightgreen;
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: limegreen;
+    color: #fff;
+}
+
+  
+nav .nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  nav li {
+    cursor: pointer;
+  }
+  
+  nav hr {
+    background-color: grey;
+  }
+  
+  .nav-links-mobile {
+    background-color: #fff;
+    position: fixed;
+    top: 48px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    list-style-type: none;
+    line-height: 2;
+    text-align: center;
+    border-bottom: 2px solid #0000001a;
+    font-weight: 500;
+  }
+  
+  nav .hamburg-menu {
+    display: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  @media screen and (min-width: 300px) and (max-width: 640px) {
+    nav {
+      box-shadow: 0px 3px 6px #0000001a;
+      width: 100%;
+      display: flex;
+      padding: 0 8%;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      background: #fff;
+      z-index: 5;
+      margin-left: 0;
+    }
+  
+    .logo-head {
+      font-size: 15px;
+    }
+  
+    .Logo span {
+      font-size: 30px;
+    }
+  
+    .Gallery-1{
+        display: flex !important;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .img-1{
+        width: 100%;
+    }
+    .img-2, .img-3{
+        display: none;
+    }
+    nav .nav-links {
+      display: none;
+    }
+  
+    nav hr {
+      display: none;
+    }
+  
+    nav .hamburg-menu {
+      font-size: 25px;
+      z-index: 2;
+      display: block;
+    }
+  
+    nav .button {
+      background-color: #000;
+      border-color: #fff;
+      color: #fff;
+      pointer-events: none;
+    }
+  }
+  
